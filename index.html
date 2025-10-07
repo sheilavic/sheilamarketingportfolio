@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website - Easy Tutorials</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+<div id="header">
+    <video autoplay muted loop id="header-video">
+    <source src="images/header.mp4" type="video/mp4">
+  </video>
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="resume.html" class="active">RESUME</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </div>
+</div>
+<!-- -----------about---------- -->
+<div id="about">
+  <div class="container">
+    <div class="row">
+      <div class="about-col-2">
+        <div class="tab-section">
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">SKILLS</p>
+            <p class="tab-links" onclick="opentab('experience')">EXPERIENCE</p>
+            <p class="tab-links" onclick="opentab('education')">EDUCATION</p>
+          </div>
+
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Marketing Strategy</span><br>Developing data-driven marketing plans and go-to-market strategies.</li>
+              <li><span>Data Analytics</span><br>Analyzing market, consumer, and financial data to uncover insights.</li>
+              <li><span>Market Research</span><br>Conducting competitor and pricing analysis to inform product positioning.</li>
+              <li><span>Content Creation</span><br>Designing digital assets and campaigns across social and web platforms.</li>
+              <li><span>Visualization & Reporting</span><br>Building dashboards and presentations in Power BI and Tableau.</li>
+              <li><span>Technical Tools</span><br>Proficient in Excel (Pivot Tables, VLOOKUP), SQL, Python, HTML/CSS, Power BI, and Canva.</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>April 2025 - July 2025</span><br>Global Marketing Internship at APCO.</li>
+              <li><span>April 2025 - July 2025</span><br>Marketing Analytics Internship at BiotechBeauty.</li>
+              <li><span>June 2024 - August 2024</span><br>Marketing Internship at SMBC MANUBANK.</li>
+              <li><span>May 2023 - July 2023</span><br>Marketing Internship at Tenants Law Firm.</li>
+              <li><span>June 2022 - July 2022</span><br>Internship at Nuleep Hexagon and USC MOVE Program.</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>2021 - 2025</span><br>Bachelor of Science in Business Administration, Minor in Consumer Behavior</li>
+            </ul>
+          </div>
+        </div> <!-- end tab-section -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ----------portfolio------------ -->
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">MY WORK PORTFOLIO</h1>
+        
+        <!-- APCO -->
+        <div class="work-item">
+            <div class="work">
+                <img src="images/apco.png">
+                <div class="layer">
+                    <h3>APCO: Global Marketing Internship</h3>
+                    <p>At APCO, I assisted the company's transition from their rebrand and CRM optimization. I created LinkedIn promotions for the company's though leadership pieces and events. I also assist in editing blog articles. You can check them out here on APCO's website and LinkedIn:</p>
+                    <a href="https://apcoworldwide.com/"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work-description">
+                <h4>Role</h4>
+                <p>Global Marketing Intern, supporting rebranding and CRM improvement.</p>
+                <h4>Problem</h4>
+                <p>APCO was undergoing global rebrand, which required data cleanup and new marketing materials.</p>
+                <h4>Solution</h4>
+                <p>Created new promotional materials to reflect new brand guidelines and migrated client data to HubSpot with high accuracy.</p>
+                <h4>Process</h4>
+                <ul>
+                    <li>Developed weekly marketing promotional materials to LinkedIn that aligned with new brand guidelines.</li>
+                    <li>Migrated and cleaned 500+ client profiles in HubSpot, resolving duplicates and bounces.</li>
+                    <li>Edited 18+ thought leadership blog articles for the firm’s website and LinkedIn, ensuring clarity and brand alignment.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- BiotechBeauty -->
+        <div class="work-item">
+            <div class="work">
+                <img src="images/biotech.png">
+                <div class="layer">
+                    <h3>Biotech Beauty: Marketing Analytics Internship</h3>
+                    <p>At Biotech Beauty, I developed actionable positioning strategies and produced a competitor analysis of their blush and bronzer sticks. My marketing campaigns can be found on Biotech Beauty's Instagram page here:</p>
+                    <a href="https://www.instagram.com/biotechbeautyus/"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work-description">
+                <h4>Role</h4>
+                <p>Marketing Analytics Intern, supporting go-to-market strategies for partnerships.</p>
+                <h4>Problem</h4>
+                <p>The co-founder wanted to determine Biotech Beauty's competitive positioning in the beauty market and identify new branding and partnership opportunities.</p>
+                <h4>Solution</h4>
+                <p>Conducted competitor analysis, synthesized insights, and recommended positioning strategies.</p>
+                <h4>Process</h4>
+                <ul>
+                    <li>Collected and analyzed competitor data for product and market insights.</li>
+                    <li>Developed positioning strategies tailored to potential partnerships, presenting reccomendations to the marketing team.</li>
+                    <li>Led ROI analysis of 15+ Instagram boosted ad campaigns using Shopify and Meta data, identifying engagement patterns.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SMBC MANUBANK -->
+        <div class="work-item">
+            <div class="work">
+                <img src="images/smbc.JPG">
+                <div class="layer">
+                    <h3>SMBC MANUBANK: Product Marketing Internship</h3>
+                    <p>At SMBC MANUBANK, I analyzed 345 bank fees and presented recommendations to C-Suite executives. I am very proud of this project as my suggestions were officially implemented and you can check their updated fees on the website:</p>
+                    <a href="https://www.smbcgroup.com/"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work-description">
+                <h4>Role</h4>
+                <p>Product Marketing Intern, focusing on fee analysis and competitive benchmarking.</p>
+                <h4>Problem</h4>
+                <p>The firm had an outdated fee schedule and needed to re-evaluated it in order to assess their position in the market.</p>
+                <h4>Solution</h4>
+                <p>Performed comprehensive an annual pricing review and presented actionable recommendations to stakeholders.</p>
+                <h4>Process</h4>
+                <ul>
+                    <li>Conducted a competitor analysis of 345 bank fees and cross-checked data against 10 competitor banks.</li>
+                    <li>Performed a financial impact analysis and identified $380,000 incremental revenue opportunities.</li>
+                    <li>Presented reccomendations and reports to senior stakeholders.</li>
+                </ul>
+            </div>
+        </div>
+ <div class="work-item">
+                <div class="work">
+                    <img src="images/tlf.png" alt="Tenants Law Firm work">
+                    <div class="layer">
+                        <h3>Tenants Law Firm: Marketing Internship</h3>
+                        <p>At the Tenants Law Firm, I was responsible for digital content creation & outreach campaigns. I have created testimonial videos and marketing materials that were published to the instagram, which you can view here:</p>
+                        <a href="https://www.instagram.com/tenantslawfirm/"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work-description">
+                    <h4>Role</h4>
+                    <p>Marketing Intern, supported marketing efforts by designing digital campaigns and creating content for social media platforms.</p>
+
+                    <h4>Problem</h4>
+                    <p>The firm wanted to increase client engagement and brand awareness online but had inconsistent digital presence.</p>
+
+                    <h4>Solution</h4>
+                    <p>Produced cohesive social media campaigns and visually engaging content that aligned with the firm’s branding.</p>
+
+                    <h4>Process</h4>
+                    <ul>
+                        <li>Designed graphics and videos for social media and email campaigns.</li>
+                        <li>Scheduled content and tracked engagement metrics for reporting.</li>
+                        <li>Collaborated with the team to refine messaging and improve outreach strategies.</li>
+                    </ul>
+                </div>
+            </div>
+        <!-- USC MOVE -->
+        <div class="work-item">
+            <div class="work">
+                <img src="images/eboard.png">
+                <div class="layer">
+                    <h3>Marshall Outreach and Volunteer Entrepreneurs (MOVE): Director of Marketing</h3>
+                    <p>At MOVE, I was part of the executive board where I created social media content for Instagram and LinkedIn. I also coordinated and created promotional materials for recruiting, volunteering and professional events. You can view my work on MOVE's Instagram here:</p>
+                    <a href="https://www.instagram.com/move.usc/"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work-description">
+                <h4>Role</h4>
+                <p>Director of Marketing, tasked with creating marketing initiatives to engage new and current members on professional development and volunteering events.</p>
+                <h4>Problem</h4>
+                <p>Our President wanted to strengthen the organization's visibility and engagement among USC students and revamp branding on the Instagram page.</p>
+                <h4>Solution</h4>
+                <p>Launched a cohesive digital marketing campaign highlighting member experiences and MOVE’s community initiatives, which increased engagement, expanded reach across platforms, and attracted new members to the organization..</p>
+                <h4>Process</h4>
+                <ul>
+                    <li>Analyzed MOVE’s existing marketing efforts, identified gaps in social media engagement and event promotion, and gathered feedback from members to understand what messaging resonated most.</li>
+                    <li>Developed a refreshed marketing strategy—updating the organization’s visual identity, optimizing social media content.</li>
+                    <li>Implemented consistent posting schedules and storytelling around impact-driven initiatives.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Nuleep Hexagon / USC MOVE -->
+        <div class="work-item">
+            <div class="work">
+                <img src="images/nuleep.png">
+                <div class="layer">
+                    <h3>Nuleep Hexagon & USC MOVE Program: Internship</h3>
+                    <p>For this program, I led a consulting project for HBCU.vc to help underrepresented entrepreneurs. You can read my impact report here:</p>
+                    <a href="https://media.licdn.com/dms/document/media/v2/C562DAQF-DT2io0H_iQ/profile-treasury-document-pdf-analyzed/profile-treasury-document-pdf-analyzed/0/1677651448150?e=1760572800&v=beta&t=ZRGEZCTlXr3xMDlyvl0wukfrKU1mGvpXMmyNUlRaoyM"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work-description">
+                <h4>Role</h4>
+                <p>Intern tasked with a consulting project for a non-profit called HBCU.vc supporting underrepresented entrepreneurs.</p>
+                <h4>Problem</h4>
+                <p>Need to identify students from underrepresented universities for Pledge LA’s Summer Venture Capital Internship Program.</p>
+                <h4>Solution</h4>
+                <p>Administered surveys, analyzed results, and delivered strategic recommendations to the Program Manager.</p>
+                <h4>Process</h4>
+                <ul>
+                    <li>Designed and administered qualitative surveys to 15 students from underrepresented groups.</li>
+                    <li>Analyzed survey data to identify trends and insights.</li>
+                    <li>Produced an impact report and delivered recommendations for new strategies to acquire entrepreneurs and clients.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- See More Button -->
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+
+<!-- Footer / Copyright Section -->
+<div class="copyright">
+    <p>Copyright © Sheila Victor </p>
+</div>
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+<script>
+    const scriptURL = '< add you own link here >' // add your own app script link here
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,680 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sauce+One:wght@400;500;600;700&display=swap');* 
+{
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sauce One', sans-serif;
+  box-sizing: border-box;
+}
+.sub-title {
+  font-family: 'Open Sauce One', sans-serif;
+  /* Optional styling */
+  font-weight:lighter;
+  letter-spacing: 2px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #fff9e5;
+    color: #000000;
+}
+#header {
+    position: relative;
+    width: 100%;
+    height: 90vh; /* smaller than 100vh for a shorter header */
+    overflow: hidden;
+}
+
+#header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* makes video cover the div fully */
+    z-index: 0;
+}
+
+#header .container {
+    position: relative; /* ensures nav/logo are above the video */
+    z-index: 1;
+}
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#about {
+    background-image: url('images/background.svg');  /* replace with your actual image file name */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 0; /* Optional: adds space around content */
+}
+.logo{
+    width: 140px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #fff9e5;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #e644cc;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+/* -----------about--------------- */
+#about{
+    padding: 80px 0;
+    color: #000000f4;
+    min-height: 100vh; /* or a specific height like 800px */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#about p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #000;
+}
+#about .about-col-2 {
+  text-align: left;         /* Aligns text to the left */
+  max-width: 800px;         /* Optional: keeps text from stretching too wide */
+  margin: 0 auto;           /* Centers the block while keeping text left-aligned */
+  line-height: 1.7;
+  border: 1px solid #fff9e5;  /* ✅ Adds a thin black border */
+  padding: 20px;            /* Optional: adds space between text and border */
+  border-radius: 4px;
+  
+}
+#about .about-col-2 .sub-title {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #c1e600; /* same color as tabs */
+  width: 100%;
+  display: inline-block; /* keeps underline only as wide as the text */
+}
+.sub-title {
+  letter-spacing: 2px;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+    height: 100%;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+
+/* --- Tabs Container --- */
+.tab-titles {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #c1e600;
+  padding-bottom: 10px;
+}
+
+/* --- Tab Titles --- */
+.tab-links {
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.tab-links.active-link {
+  color: #000;
+}
+
+/* Underline effect for active tab */
+.tab-links::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #6b5bff; /* accent color */
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: width 0.3s;
+}
+
+.tab-links.active-link::after {
+  width: 100%;
+}
+
+/* --- Border Box for Tabs --- */
+.about-col-2 {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 2px solid #dcdcdc;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px #fff9e5;
+  background-color: #fff;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* --- Tab Content --- */
+.tab-contents {
+  position: relative;
+  min-height: 450px; /* adjust this to fit your tallest content */
+}
+
+.tab-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tab-content.active-tab {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+
+.tab-contents ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tab-contents ul li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.tab-contents ul li span {
+  color: #e644cc;
+  font-weight: 600;
+}
+.tab-contents,
+.tab-content {
+  text-align: left; /* Ensures all text stays left-aligned */
+}
+
+.tab-content ul {
+  list-style: none; /* optional: keep your clean list look */
+  padding: 0;
+  margin: 0;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #c1e600;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #e644cc;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #e644cc;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+/* -------portfolio----------- */
+#portfolio{
+    padding: 40px 0;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 80%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+img:not(.logo) {
+  aspect-ratio: 1 / 1;       /* makes all non-logo images square */
+  object-fit: cover;          /* crops neatly inside the square */
+  border: 1px solid #fff9e5;     /* thin black border */
+  border-radius: 8px;         /* optional for rounded corners */
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #e644cc);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+   transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #e644cc;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #e644cc;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #c1e600;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #e644cc;
+}
+
+/* ---------contact-------- */
+.contact-left{
+    padding-top: 50px;
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+    padding-top: 50px;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #e644cc;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #000;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #e644cc;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: #e644cc;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #fff;
+    padding: 15px;
+    margin: 15px 0;
+    color: #e644cc;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #c1e600;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright i{
+    color: #e644cc;
+}
+.copyright a{
+    color: #e644cc;
+    text-decoration: none;
+}
+/* -----------------css for small screens--------- */
+nav .fas{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(images/phone-background.png);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #e644cc;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}
+
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
+.tab-titles {
+  margin: 10px 0 10px; /* reduces top and bottom spacing */
+}
+
+.tab-links {
+  margin-right: 40px; /* slightly closer spacing between tabs */
+}
+
+.tab-contents ul {
+  margin-top: 0; /* removes gap before list starts */
+}
+
+.tab-contents ul li {
+  margin: 6px 0; /* tighter vertical spacing between items */
+}
+
+.tab-titles {
+  margin-bottom: 10px; /* small gap below the tabs */
+}
+
+/* Adds better readability for the text under each tab */
+.tab-contents ul li {
+  line-height: 1.6; /* increases space between lines of text */
+  margin: 6px 0; /* small gap between each list item */
+}
+.work-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.work {
+  position: relative;
+  flex: 1;
+  max-width: 45%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.work img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 10px;
+}
+
+.work:hover .layer {
+  opacity: 1;
+}
+
+.work-description {
+  flex: 1;
+  color: #000000;
+  line-height: 1.6;
+}
+
+.work-description h4 {
+  color: #e644cc;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.work-description ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+#portfolio .sub-title {
+    margin-bottom: 40px; /* adjust the value as needed */
+}
+
+#about .sub-title {
+    margin-bottom: 40px; /* adjust the value as needed */
+}
+
+.work-description {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  /* aligns text at the top */
+    color: #000000;
+    line-height: 1.6;
+}
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  display: inline-flex;              /* Align icon and text horizontally */
+  align-items: center;               /* Vertically center them */
+  gap: 10px;                         /* Add a small space between icon and text */
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a i {
+  font-size: 20px;
+  color: #e644cc;                    /* Accent color */
+}
+
+.social-icons a:hover {
+  color: #e644cc;
+}
+#resume {
+  padding: 80px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.resume-buttons {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
+  background-color: #e644cc;
+  color: #61b752;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e644cc;
+}
+
+.resume-frame {
+  margin-top: 40px;
+  width: 100%;
+  height: 900px;
+  display: flex;
+  justify-content: center;
+}
+
+.work-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 80px;
+
+  /* 🔲 Add the frame */
+  border: 1px solid #fff; /* or use #000 for black border */
+  border-radius: 0px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
