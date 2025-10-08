@@ -52,7 +52,7 @@ nav{
 }
 
 #about {
-    background-image: url('images/background.svg');  /* replace with your actual image file name */
+    background-image: url('Images/background.svg');  /* replace with your actual image file name */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -447,7 +447,7 @@ nav .fas{
 
 @media only screen and (max-width: 600px){
     #header{
-        background-image: url(images/phone-background.png);
+        background-image: url(Images/background.svg);
     }
     .header-text{
         margin-top: 100%;
